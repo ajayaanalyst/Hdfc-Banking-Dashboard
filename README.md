@@ -1,6 +1,3 @@
-# Create a README.md file with the given content for the HDFC Banking Dashboard Project
-
-readme_content = """
 # HDFC Banking Dashboard Project
 
 ## Overview
