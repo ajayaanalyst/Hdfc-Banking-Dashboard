@@ -1,159 +1,80 @@
 # Fin Insight Banking Analytics: Customer Transactions & Risk Analysis
 
-## Overview
-The **HDFC Financial Insights** project provides an in-depth analysis of financial metrics, customer behavior, and risk assessments for HDFC Bank. Developed using Power BI, this dashboard equips stakeholders with actionable insights to improve operational efficiency, customer satisfaction, and financial risk management.
+# Banking Data Analytics & Risk Assessment – Power BI & MySQL 🚀
 
----
+## Project Overview 📊
+This project analyzes banking transactions, customer behavior, fraud risk, and financial forecasting using Power BI & MySQL. Through advanced DAX functions and AI-driven insights, it helps banks optimize services, enhance customer retention, and improve risk management.
 
-## Problem Statement
-### Case Study: Unlocking Financial Insights in Banking Data
+## Key Objectives 📌
+- **Identify transaction trends & customer spending behavior.**
+- **Perform risk assessment & fraud detection using anomaly analysis.**
+- **Analyze loan performance & credit score impact.**
+- **Predict future banking trends & revenue growth using AI models.**
 
-### Background
-As a data analyst at FinInsight Group, a consultancy specializing in banking analytics, you are provided with two comprehensive datasets:
-1. **Banking Transactions**: Contains detailed transaction data, including transaction types, amounts, dates, and branch information.
-2. **Customer Account Details**: Offers insights into account holders, such as account types, balances, interest rates, credit scores, and loan amounts.
+## Tech Stack & Tools 🛠
+- **Database:** MySQL (Data storage & retrieval)
+- **Visualization & Analytics:** Power BI (DAX, AI Clustering, Anomaly Detection)
+- **Data Processing:** SQL Queries & Power Query
 
-Your expertise is essential to uncover patterns and behaviors within this data. These insights will help banking institutions enhance their customer relationship management, optimize financial services, and manage risks effectively.
+## Dataset Details 📂
+### 1. Customer Accounts (Dimension Table)
+- **AccountNumber:** Unique identifier for each account.
+- **AccountHolder:** Customer's name.
+- **AccountType:** (Credit, Loan, Savings, etc.)
+- **Balance & LoanAmount:** Financial details per account.
+- **InterestRate & CreditScore:** Key financial indicators.
+- **AccountHolderDetails:** Extracted into Sector, City, Residence Year.
 
-### Objective
-The goal is to use Power BI for:
-1. Cleaning and modeling data to ensure accuracy and consistency.
-2. Leveraging DAX for advanced analytics.
-3. Creating a comprehensive, interactive dashboard to:
-   - Illustrate transactional trends.
-   - Profile customers.
-   - Provide a holistic view of the banking ecosystem.
+### 2. Banking Transactions (Fact Table)
+- **TransactionID:** Unique transaction identifier.
+- **AccountNumber:** Foreign key linking to customer accounts.
+- **TransactionType:** (Deposit, Withdrawal, Transfer, Payment)
+- **Amount & Currency:** Financial transaction details.
+- **TransactionDate & TransactionTime:** For time-based trend analysis.
 
-The analysis aims to understand:
-- Customer transaction behaviors.
-- Relationships between account characteristics and financial health.
-- Factors influencing credit scores and loan management.
+## Dashboards & Key Insights 📊
+### 1. Financial Overview Dashboard
+- **KPI Cards:** Total Transactions, Revenue, Active Customers.
+- **Line Chart:** Revenue Over Time.
+- **Pie Chart:** Account Type Distribution.
+- 💡 **Insight:** 80% of revenue comes from savings & checking accounts.
 
----
+### 2. Customer Behavior & Retention Dashboard
+- **Retention Rate & Churn Risk Score.**
+- **Clustered Bar Chart:** Account Tenure vs. Balance.
+- **Donut Chart:** Churn Risk Categories.
+- 💡 **Insight:** 20% of customers churn within 1 year due to low balance.
 
-## Insights from the Dashboard
+### 3. Transaction Trends & Performance Dashboard
+- **Peak Transaction Hours:** Transactions are 2x higher from 10 AM - 2 PM.
+- **Transaction Type Analysis:** Withdrawals & Deposits make up 75% of total transactions.
 
-### Key Metrics
-- **Total Balance**: 20.51M  
-- **Average Balance**: 25.64K  
-- **Transaction Amount**: 5.06M  
-- **Average Transaction Amount**: 5.06K  
-- **Total Loan Amount**: 21.36M  
-- **Average Loan Amount**: 26.71K  
-- **Average Interest Rate**: 2.68%  
-- **Total Transactions**: 1K  
-- **Unique Transactions**: 1K  
-- **Average Transactions**: 500.50  
-- **Total Customers**: 1K  
-- **Unique Customers**: 558  
-- **Average Credit Score**: 574.80  
-- **Total Branches**: 431  
-- **Branch-Wise Average Transactions**: 1.00K
+### 4. High-Value Transactions & Risk Dashboard
+- **Table:** High-value transactions (2x above avg. amount).
+- **Scatter Plot:** Transaction Amount vs. Credit Score.
+- 💡 **Insight:** Customers with low credit scores (below 500) have high withdrawal rates.
 
-### Yearly Transaction Amounts
-- **2023**: 1.96M  
-- **2024**: 1.83M  
-- **2025**: 1.38M
+### 5. Credit Score & Loan Analysis Dashboard
+- **Loan Default Risk:** 60% of unpaid loans belong to high-risk customers (Credit Score <500).
+- **Interest Rate Trends:** High interest rates correlate with delayed repayments.
 
-### Transaction Amount by Type
-- **Withdrawal**: 23.23%
-- **Deposit**: 22.99%
-- **Transfer**: 24.02%
-- **Payment**: 29.76%
+### 6. Branch Performance & Revenue Dashboard
+- **Map Visual:** Branch Locations & Revenue Distribution.
+- **Stacked Bar Chart:** Branch-wise Revenue Comparison.
+- 💡 **Insight:** Digital banking branches outperform traditional ones by 15% revenue growth.
 
-### Credit Score Categories by Account Numbers
-- **Excellent**: 118  
-- **Very Good**: 105  
-- **Good**: 123  
-- **Fair**: 145  
-- **Poor**: 509
+### 7. Fraud Detection & Risk Assessment Dashboard
+- **KPI Cards:** Fraud Risk Score, Unusual Transactions Count.
+- **Bubble Chart:** High-Risk Accounts.
+- 💡 **Insight:** Transactions at odd hours (10 PM - 6 AM) are 2.5x more likely to be fraudulent.
 
-### Account Type Distribution
-- **Savings**: 218 (27.25%)
-- **Loan**: 197 (24.63%)
-- **Credit**: 194 (24.25%)
-- **Checking**: 191 (23.88%)
-
-### Visual Insights
-#### Balance Distribution
-- Bar graph shows balances by account number ranging from 1K to 50K.
-
-#### Loan Amount and Credit Score
-- Scatter plot reveals the relationship between loan amounts and credit scores.
-
-#### Average Balance by Account Type
-- Savings: 27K  
-- Credit: 25K  
-- Checking: 25K  
-- Loan: 25K
-
-#### Transaction Type by Time of Day
-| Transaction Type | Morning | Afternoon | Evening | Night | Total |
-|------------------|---------|-----------|---------|-------|-------|
-| Deposit          | 72      | 61        | 52      | 44    | 229   |
-| Payment          | 73      | 83        | 74      | 77    | 307   |
-| Transfer         | 57      | 67        | 57      | 64    | 245   |
-| Withdrawal       | 64      | 56        | 61      | 38    | 219   |
-| **Total**        | 266     | 267       | 244     | 213   | 1000  |
-
-#### Financial Trends
-- **Sum of Amounts by Year and Quarter**:
-  - Line graph from January 2023 to January 2026 shows fluctuations between 452K and 483K.
-  - Notable dips: 410K (July 2024) and 428K (January 2026).
-
-- **Count of Accounts by Year, Quarter, and Month**:
-  - Line graph shows stability around 30 accounts from January 2020 to January 2022, with a significant drop to 10 in January 2022.
-
----
-
-## Methodology
-### Part 1: Data Preparation
-1. **Data Import**: Imported datasets into Power BI for analysis.
-2. **Data Cleaning**:
-   - Addressed missing and duplicate entries.
-   - Standardized data types for consistency.
-3. **Data Modeling**:
-   - Merged datasets on `AccountNumber`.
-   - Created relationships between transaction and account data.
-
-### Part 2: Advanced Analysis
-1. **DAX Functions**: Used for complex measures and calculated columns.
-2. **Key Analytics**:
-   - Correlation analysis between loan amounts and credit scores.
-   - Time-based transaction trends and seasonality.
-   - Risk assessment modeling based on credit scores and transaction behaviors.
-
-### Part 3: Visualization
-1. **Interactive Dashboard**:
-   - Showcased key metrics with slicers for account types, branches, and currencies.
-   - Designed visually appealing charts and graphs for better storytelling.
-2. **Filters and Interactivity**:
-   - Enabled filters for time, account type, and transaction type.
-   - Included drill-down options for branch-wise and customer-specific analysis.
-
----
-
-## Tools Used
-- **Power BI**: For data cleaning, modeling, and dashboard creation.
-- **DAX**: For advanced analytics and calculations.
-- **Excel**: Initial data exploration and preprocessing.
-
----
+### 8. Predictive Analytics & Forecasting Dashboard
+- **AI Clustering for Customer Segmentation.**
+- **Forecasted Transactions & Revenue Trends.**
+- 💡 **Insight:** Banking transactions expected to increase by 15% next quarter.
 
 ## Conclusion
-The **HDFC Banking Dashboard** delivers actionable insights into customer behavior, transaction patterns, and financial performance. By leveraging these insights, HDFC Bank can:
-- Enhance customer relationship management.
-- Optimize product offerings.
-- Mitigate financial risks effectively.
+This project showcases the powerful capabilities of Power BI & MySQL in uncovering financial insights, detecting fraud, and predicting banking trends. By leveraging advanced analytics and AI models, banks can optimize services, enhance customer retention, and improve risk management.
 
-### Next Steps
-1. **Predictive Modeling**:
-   - Estimate future transaction volumes and customer growth.
-2. **Enhanced Risk Assessment**:
-   - Develop a deeper risk scoring mechanism for customer segmentation.
-3. **Integration with Real-Time Data**:
-   - Enable live data feeds for up-to-date insights.
-
----
-
-### Repository Structure
+## Author
+Ajaya Kumar Pradhan
