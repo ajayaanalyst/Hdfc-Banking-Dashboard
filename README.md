@@ -1,4 +1,4 @@
-# HDFC Financial Insights Project
+# Fin Insight Banking Analytics: Customer Transactions & Risk Analysis
 
 ## Overview
 The **HDFC Financial Insights** project provides an in-depth analysis of financial metrics, customer behavior, and risk assessments for HDFC Bank. Developed using Power BI, this dashboard equips stakeholders with actionable insights to improve operational efficiency, customer satisfaction, and financial risk management.
