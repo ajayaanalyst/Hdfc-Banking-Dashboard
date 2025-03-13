@@ -1,6 +1,4 @@
-# Fin Insight Banking Analytics: Customer Transactions & Risk Analysis
-
-# Banking Data Analytics & Risk Assessment – Power BI & MySQL 🚀
+# Fin Insight Banking Analytics: Customer Transactions & Risk Analysis – Power BI & MySQL 🚀
 
 ## Project Overview 📊
 This project analyzes banking transactions, customer behavior, fraud risk, and financial forecasting using Power BI & MySQL. Through advanced DAX functions and AI-driven insights, it helps banks optimize services, enhance customer retention, and improve risk management.
